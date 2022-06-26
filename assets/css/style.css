@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #8bd2e4;
+    padding: 0px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-shadow: 0.25rem 0.25rem 0.25rem orange;
+    font-size: 2.978rem;
+    text-align: center;
+    color: rgb(14, 14, 113);
+    animation: mymove 5s infinite;
+    height: 5.313rem;
+    margin-bottom: 1.875rem;
+    padding: 1.063rem;
+}
+
+@keyframes mymove {
+    0% {
+        top: 0px;
+        left: 0px;
+        background: red;
+    }
+    25% {
+        top: 0px;
+        left: 100px;
+        background: blue;
+    }
+    50% {
+        top: 100px;
+        left: 100px;
+        background: yellow;
+    }
+    75% {
+        top: 100px;
+        left: 0px;
+        background: green;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        background: red;
+    }
+}
+
+img {
+    width: 60%;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.card {
+    width: 70%;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.125rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 1.563rem;
+    box-shadow: 0.125rem 0.125rem 0.25rem 0.25rem rgba(255, 166, 0, 0.547);
+    transition: all 0.4s;
+    margin: 1.25rem;
+    -
+}
+
+.card:hover {
+    box-shadow: 0.125rem 0.125rem 0.625rem rgba(235, 90, 5, 0.7);
+    transform: scale(1.05);
+    z-index: 3;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+    .card {
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+    .card {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 250%;
+    }
+    .container-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .card {
+        width: 60%;
+    }
+}
